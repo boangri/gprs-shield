@@ -537,7 +537,8 @@ bool GPRS::join(char* apn, char* userName, char* passWord, int timeout)
         while (s < p) {
             ip_string[i++] = *(s++);
         }
-        ip_string[i] = '\0';            
+        ip_string[i] = '\0';  
+		Serial.println(ip_string);
     }
     _ip = str_to_ip(ip_string);
     if(_ip != 0) {

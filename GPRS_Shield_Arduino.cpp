@@ -75,25 +75,25 @@ bool GPRS::checkPowerUp(void)
 
 void GPRS::powerUpDown()
 {
-  pinMode(2, OUTPUT);
-  if(digitalRead(3)!=1)
+  pinMode(6, OUTPUT);
+  if(digitalRead(7)!=1)
   {
-    digitalWrite(2, HIGH);
+    digitalWrite(6, HIGH);
     delay(3000);
   }
-  digitalWrite(2, LOW);
+  digitalWrite(6, LOW);
   delay(3000);
 }
 
 void GPRS::powerOff()
 {
-  pinMode(2, OUTPUT);
-  if(digitalRead(3)==1)
+  pinMode(6, OUTPUT);
+  if(digitalRead(7)==1)
   {
-    digitalWrite(2, HIGH);
+    digitalWrite(6, HIGH);
     delay(3000);
   }
-  digitalWrite(2, LOW);
+  digitalWrite(6, LOW);
   delay(3000);
 }   
     

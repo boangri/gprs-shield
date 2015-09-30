@@ -40,6 +40,8 @@ GPRS::GPRS(uint32_t baudRate)
     inst = this;
     sim900_init(&SERIAL_PORT_HARDWARE);
     SERIAL_PORT_HARDWARE.begin(baudRate);
+	Serial.println("set baud rate");
+	Serial.println(SERIAL_PORT_HARDWARE);
 }
 
 GPRS::GPRS(uint8_t tx, uint8_t rx, uint32_t baudRate)
@@ -83,6 +85,7 @@ void GPRS::powerUpDown()
   }
   digitalWrite(8, LOW);
   delay(3000);
+  Serial.println("powerUpDown");
 }
 
 void GPRS::powerOff()
